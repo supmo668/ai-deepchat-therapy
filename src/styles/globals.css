@@ -1,0 +1,207 @@
+/* styles/globals.css */
+
+/* CSS Reset or Normalize */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+/* Root Variables for Colors and Fonts */
+:root {
+  /* Color Palette */
+  --color-primary: #0066cc; /* Deep blue for primary actions */
+  --color-secondary: #009688; /* Teal for secondary elements */
+  --color-accent: #ff5722; /* Vibrant orange for accents */
+  --color-background: #f4f6f8; /* Light gray background */
+  --color-surface: #ffffff; /* White surface for cards, modals */
+  --color-text-primary: #2c3e50; /* Dark slate for primary text */
+  --color-text-secondary: #4f5b69; /* Medium gray for secondary text */
+  --color-border: #d1d9e6; /* Light gray for borders */
+
+  /* Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Source Sans Pro', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Shadows */
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  color: var(--color-text-primary);
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+button {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+button.primary:hover {
+  background-color: darken(var(--color-primary), 10%);
+}
+
+button.secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+button.secondary:hover {
+  background-color: darken(var(--color-secondary), 10%);
+}
+
+/* Navbar Styles */
+nav {
+  background-color: var(--color-surface);
+  box-shadow: var(--box-shadow);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav .navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+nav .navLinks {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+nav .navLinks li a {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+nav .loginButton {
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 4px;
+}
+
+nav .loginButton:hover {
+  background-color: darken(var(--color-accent), 10%);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--color-surface);
+  padding: var(--spacing-lg) var(--spacing-md);
+  text-align: center;
+  color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  nav .navLinks {
+    display: none;
+  }
+
+  /* Responsive Navbar */
+  nav .menuIcon {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

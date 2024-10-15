@@ -1,0 +1,70 @@
+/* styles/About.module.css */
+
+.main {
+  padding-top: 80px; /* To account for the fixed navbar */
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f4f6f8, #e9ebee);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heading {
+  margin-top: 60px;
+  font-size: 36px;
+  color: #0066cc; /* Use primary color from globals.css */
+  font-weight: 700;
+}
+
+.description {
+  font-size: 18px;
+  color: #4f5b69;
+  max-width: 800px;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.section {
+  background-color: #ffffff; /* Use surface color from globals.css */
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 40px 20px;
+  max-width: 800px;
+}
+
+.sectionHeading {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.sectionParagraph {
+  font-size: 16px;
+  color: #4f5b69;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .sectionHeading {
+    font-size: 24px;
+  }
+
+  .description,
+  .sectionParagraph {
+    font-size: 16px;
+  }
+}
